@@ -13,13 +13,13 @@ const hbs = exphbs.create({
 
 app.engine('hbs',hbs.engine)
 app.set('view engine','hbs')
-app.set('views','views')
+app.set('views','routes/views')
 
 app.use(todoRoutes)
 
 async function start() {
     try {
-        await mongoose.connect('mongodb+srv://artem:starwars9@cluster0.xuydq.mongodb.net/todo',{
+        await mongoose.connect('mongodb+srv://artem:starwars9@cluster0.jxvpb.mongodb.net/todo',{
             useNewUrlParser:true,
             useFindAndModify:false,
         })
